@@ -1,0 +1,9 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+df=pd.read_csv('productivity.csv')
+df.head(5)
+df['Time of Day']=df['Time of Day']
+xdf=df.groupby('Time of Day')['Rate of Productivity'].sum()
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
