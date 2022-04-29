@@ -1,0 +1,14 @@
+# Union-combines elements but does not support any duplicate elements
+x={1,2,3}
+y={4,2,6}
+print(x|y)
+# Intersection-common element
+print(x&y)
+# difference- it prints the elements of the first set that is not present in the second set
+print(x-y)
+# symmetric difference-prints the elements of both the lists that is not common
+print(x^y)
+print(x.union(y))
+print(x.intersection(y))
+print(x.difference(y))
+print(x.symmetric_difference(y))
