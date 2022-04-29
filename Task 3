@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+df=pd.read_csv('Marks.csv')
+df['Class']=df['Class']
+xdf=df.groupby('Class')['Maths'].sum()
+xdf
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
+ax.grid()
+df['Class']=df['Class']
+xdf=df.groupby('Class')['English'].sum()
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
+ax.grid()
+df['Class']=df['Class']
+xdf=df.groupby('Class')['Hindi'].sum()
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
+ax.grid()
+df['Class']=df['Class']
+xdf=df.groupby('Class')['Science'].sum()
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
+ax.grid()
+df['Class']=df['Class']
+xdf=df.groupby('Class')['Social Science'].sum()
+ax=xdf.plot(kind='bar' ,alpha=1, color='r')
+ax.grid()
